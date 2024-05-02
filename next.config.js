@@ -11,7 +11,6 @@ if (isGithubActions) {
   assetPrefix = `/${repo}/`;
   basePath = `/${repo}`;
 }
-console.log(basePath);
 const nextConfig = {
     basePath,
     assetPrefix,
