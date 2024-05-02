@@ -53,16 +53,18 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+      - name: Install Pnpm
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: 7
+          run-install: true
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Install Pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
-          run-script: true
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
