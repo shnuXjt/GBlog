@@ -83,7 +83,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml', '**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm install --no-frozen-lockfile
       - name: Build with Next.js
         run: pnpm run build
       - name: Upload artifact
