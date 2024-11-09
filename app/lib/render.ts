@@ -11,6 +11,7 @@ export function renderThree(w: number, h: number, container: HTMLElement) {
     const renderer = new WebGLRenderer({antialias: true});
     renderer.setSize(w, h);
     renderer.setClearColor(0x160016, 1.0);
+    container.children.length > 0 && container.removeChild(container.children[0]);
     container.appendChild(renderer.domElement);
     
     const controls = new OrbitControls(camera, renderer.domElement);
