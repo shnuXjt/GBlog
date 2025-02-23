@@ -31,7 +31,7 @@ export const WorkExperience = () => {
   <div className="flex flex-col justify-center items-center">
       {expeirences.map((item) => {
           return (
-            <div className="pb-3 border-b-2 border-gray-500 w-full mb-3">
+            <div key={item.id} className="pb-3 border-b-2 border-gray-500 w-full mb-3">
               <div className="flex flex-row justify-between items-center w-full mb-2">
                 <span>{item.period}</span>
                 <span>{item.company}</span>

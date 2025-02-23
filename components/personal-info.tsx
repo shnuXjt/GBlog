@@ -29,7 +29,7 @@ export default function PersonalInfo() {
         <div className="grid grid-cols-2 gap-4">
             {info.map((item) => {
                 return (
-                    <p>
+                    <p key={item.id}>
                         <span className="font-bold">{item.title}:</span>
                         <span className="ml-1">{item.content}</span>
                     </p>
