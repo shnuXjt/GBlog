@@ -5,6 +5,7 @@ import { EducationBg } from "./education-bg";
 import { WorkExperience } from "./work-experience";
 import { MySkill } from "./my-skill";
 import PersonalInfo from "./personal-info";
+import { ProjectExperience } from "./project-experience";
 
 const ResumeTab = () => {
 
@@ -23,6 +24,9 @@ const ResumeTab = () => {
     },{
       id: 4,
       title: '个人技能'
+    },{
+      id: 5,
+      title: '项目经验'
     }
   ]);
 
@@ -58,13 +62,15 @@ const ResumeTab = () => {
         </ol>
         <div className="item-tab-container absolute top-2/5 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-sm bg-transparent opacity-70 z-10" style={{
             minWidth: '30vw',
-            minHeight: '30vh'
+            minHeight: '30vh',
+            maxHeight: '68vh',
+            overflowY: 'auto'
         }}>
             {resumeItemShow && selectedResumeItem === 1 && <PersonalInfo />}
             {resumeItemShow && selectedResumeItem === 2 && <WorkExperience />}
             {resumeItemShow && selectedResumeItem === 3 && <EducationBg />}
             {resumeItemShow && selectedResumeItem === 4 && <MySkill />}
-            
+            {resumeItemShow && selectedResumeItem === 5 && <ProjectExperience />}
         </div>
         </div>
     )
